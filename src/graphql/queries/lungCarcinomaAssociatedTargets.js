@@ -2,7 +2,7 @@ import { gql } from '../../utils/graphqlClient';
 const LUNG_CARCINOMA_ASSOCIATED_TARGETS = gql`
   query lungCarcinomaAssociatedTargets {
         disease(efoId:"EFO_0001071"){
-            associatedTargets (page:{index:0, size:25}){
+            associatedTargets (page:{index:0, size:10}){
                 rows{
                     target{
                         id
@@ -10,6 +10,10 @@ const LUNG_CARCINOMA_ASSOCIATED_TARGETS = gql`
                         approvedName
                     }
                     score
+                    datatypeScores{
+                        id
+                        score
+                    }
                 }
             }
         }

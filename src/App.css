@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.table-header{
+  border: 1px solid #bdbdbd;
+  font-weight: bold;
+  padding: 5px;
+}
+.table-body{
+  border: 1px solid #bdbdbd;
+  padding: 5px;
+}
+.link{
+  cursor: pointer;
+  color: #42a5f5;
+}
+.expand{
+  cursor: pointer;
+  background-color: #42a5f5;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 10px;
+  padding: 5px;
+  margin-right: 5px;
+}

@@ -46,9 +46,9 @@ function ChartContainer(props) {
                 <ResponsiveContainer width="100%" height="100%">
                     <RadarChart cx="50%" cy="50%" outerRadius="80%" data={props.data}>
                         <PolarGrid />
-                        <PolarAngleAxis dataKey="score" />
+                        <PolarAngleAxis dataKey="id" />
                         <PolarRadiusAxis />
-                        <Radar name="Mike" dataKey="score" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                        <Radar name="score" dataKey="score" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                     </RadarChart>
                 </ResponsiveContainer>
             </div>

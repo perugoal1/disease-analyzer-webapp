@@ -6,7 +6,10 @@ import ChartContainer from "../../components/charts/Charts";
 
 function Home() {
   const [rows, setRows] = useState([]);
-  const { loading, data } = useQuery(LUNG_CARCINOMA_ASSOCIATED_TARGETS);
+  const params = { 
+      id: "EFO_0001071"   // EFO ID
+  };
+  const { loading, data } = useQuery(LUNG_CARCINOMA_ASSOCIATED_TARGETS, { variables:  params });
   useEffect(() => {
     if (data) {
         setRows(data.disease.associatedTargets.rows);
@@ -26,7 +29,7 @@ function Home() {
 
   return (
     <Container className="mt-4">
-         <h3>Genes associated with lung carcinoma</h3>
+         <h3 className="main-heading">Genes associated with lung carcinoma</h3>
     { loading ? (
         <div className="loading">
             <Spinner class animation="border" variant="primary" />
@@ -35,30 +38,32 @@ function Home() {
         <div>
             <Row>
                 <Row>
-                    <Col sm={2} className="table-header">
-                        <span className="expand"></span>
-                        Approved 
+                    <Col sm={3} className="table-header">
+                        <span className="expand expand-header"></span>
+                        <span className="link-header">Approved Symbol</span>
                     </Col>
-                    <Col sm={6} className="table-header">Approved Name</Col>
-                    <Col sm={4} className="table-header">Score</Col>
+                    <Col sm={5} className="table-header ">Gene Name</Col>
+                    <Col sm={4} className="table-header">Overall Association Score</Col>
                 </Row>
             </Row>
             { rows && rows.map((obj, index)=>{
                     return(
                         <Row>
                             <Row>
-                                <Col sm={2} className="table-body">
+                                <Col sm={3} className="table-body">
                                     <span className="expand" onClick={() => showCharts(index)}>+</span>
                                     <a className="link" href={`https://platform.opentargets.org/target/${obj.target.id}
 `}>{ obj.target.approvedSymbol }</a>
                                 </Col>
-                                <Col sm={6} className="table-body">{ obj.target.approvedName }</Col>
+                                <Col sm={5} className="table-body">{ obj.target.approvedName }</Col>
                                 <Col sm={4} className="table-body">{ obj.score }</Col>
                             </Row>
                             {
                                 obj.showCharts && (
                                     <Row>
-                                        <ChartContainer data={obj.datatypeScores} />
+                                        <div className="table-body chart-border">
+                                            <ChartContainer data={obj.datatypeScores} target={obj.target.approvedSymbol} />
+                                        </div>
                                     </Row>
                                 )
                             }

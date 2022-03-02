@@ -3,7 +3,7 @@ name: Deployment
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Heroku login credentials
         run: |
           cat > ~/.netrc <<EOF
@@ -30,5 +32,5 @@ jobs:
         env:
           HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       - name: Push to Heroku
-        run: git push heroku master
+        run: git push heroku master --force
       

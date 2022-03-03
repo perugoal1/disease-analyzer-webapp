@@ -56,7 +56,7 @@ function Home() {
 `}>{ obj.target.approvedSymbol }</a>
                                 </Col>
                                 <Col sm={5} className="table-body">{ obj.target.approvedName }</Col>
-                                <Col sm={4} className="table-body">{ obj.score }</Col>
+                                <Col sm={4} className="table-body">{ obj.score.toFixed(3) }</Col>
                             </Row>
                             {
                                 obj.showCharts && (

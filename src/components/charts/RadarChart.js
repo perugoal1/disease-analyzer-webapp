@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
+import { ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts';
 
 function RadarChartContainer(props) {
 
@@ -10,6 +10,7 @@ function RadarChartContainer(props) {
                 <PolarGrid />
                 <PolarAngleAxis dataKey="id"  />
                 <PolarRadiusAxis angle={90} stroke="#212529"/>
+                <Tooltip />
                 <Radar name="score" dataKey="score" stroke="#3489ca" strokeWidth={2}  fillOpacity={0} dot={{ stroke: '#3489ca', strokeWidth: 3 }} />
             </RadarChart>
         </ResponsiveContainer>

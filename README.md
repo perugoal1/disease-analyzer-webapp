@@ -102,6 +102,8 @@ Run the below commands to start local dev server
    git clone https://github.com/perugoal1/disease-analyzer-webapp
    ```
 2. Install NPM packages
+
+   All the js dependencies are listed in `package.json`.
    ```sh
    npm install
    ```

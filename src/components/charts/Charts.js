@@ -10,7 +10,8 @@ function ChartContainer(props) {
     const data = props.data.map((obj)=> {
         return {
             ...obj,
-            id: parseLabel(obj.id)
+            id: parseLabel(obj.id),
+            score: obj.score.toFixed(3)
         }
     });
 

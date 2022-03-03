@@ -47,7 +47,6 @@ A React Based Web app to analyze diseases based on data from a GraphQL endpoint
       </ul>
     </li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -137,16 +136,6 @@ Run the below commands to generate and run production build of the app.
 - [x] Has a CICD pipleline implemented, which automatically deploys the latest code to Heroku on updates to Master branch. [link](https://github.com/perugoal1/disease-analyzer-webapp/actions/workflows/deploy.yml)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->

@@ -1,8 +1,7 @@
-# disease-analyzer-webapp
+# Disease Analyzer Webapp
 A React Based Web app to analyze diseases based on data from a GraphQL endpoint
 
 <div id="top"></div>
-
 
 
 <!-- PROJECT LOGO -->
@@ -17,9 +16,14 @@ A React Based Web app to analyze diseases based on data from a GraphQL endpoint
   <p align="center">
     A React Based Web app to analyze diseases based on data from a GraphQL endpoint
     <br />
-    <a href="https://disease-analyzer-webapp.herokuapp.com/"><strong>Deployed Web App: https://disease-analyzer-webapp.herokuapp.com/</strong></a>
+    Deployed Web App URL : <a href="https://disease-analyzer-webapp.herokuapp.com/"><strong> https://disease-analyzer-webapp.herokuapp.com/</strong></a>
     <br />
   </p>
+
+  ---
+
+  [![Deployment](https://github.com/perugoal1/disease-analyzer-webapp/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/perugoal1/disease-analyzer-webapp/actions/workflows/deploy.yml)
+  
 </div>
 
 
@@ -64,7 +68,7 @@ This is a React web application that queries the GraphQL API, processes the resp
 
 ### Built With
 
-This section lists frameworks/libraries used in the project.
+List of frameworks/libraries used in the project.
 
 * [React.js](https://reactjs.org/)
 * [GraphQL](https://graphql.org/)
